@@ -36,8 +36,10 @@ fi
 wget -O netclient https://github.com/gravitl/netmaker/releases/download/latest/netclient
 chmod +x netclient
 
-if [[ ${#myvar} -ne 0 ]]; then
-   sudo ./netclient join -t $KEY --name $NAME 
+if [[ ${#NAME} -ne 0 ]]; then
+   sudo ./netclient join -t $KEY --name $NAME
+else
+   sudo ./netclient join -t $KEY   
 fi
-sudo ./netclient join -t $KEY
+
 rm -f netclient
