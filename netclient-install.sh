@@ -7,7 +7,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 [ -z "$KEY" ] && KEY=nokey;
-HOST=$(hostname)
+HOST=$(hostname);
 
 wget -O netclient https://github.com/gravitl/netmaker/releases/download/latest/netclient
 chmod +x netclient
