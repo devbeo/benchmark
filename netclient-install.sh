@@ -10,6 +10,6 @@ fi
 
 wget -O netclient https://github.com/gravitl/netmaker/releases/download/latest/netclient
 chmod +x netclient
-sudo ./netclient join --name $HOSTNAME -t $KEY
+sudo ./netclient join --name "$HOSTNAME" -t $KEY
 
 rm -f netclient
